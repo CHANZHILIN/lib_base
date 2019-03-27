@@ -4,6 +4,8 @@ apply plugin: 'com.android.library'
 android {
     project.ext.setDefaultConfig android    //调用配置信息
     defaultConfig {
+        defaultPublishConfig 'release'
+        publishNonDefault true
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]

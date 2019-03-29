@@ -6,5 +6,5 @@ package chen.baselib;
  * version:2.0
  **/
 public interface Constants {
-    String LOGIN_PATH = "/module_login/loginActivity";
+    String LOGIN_PATH = "/module_login/loginActivity";      //登录页面
 }

@@ -8,6 +8,7 @@ import android.os.Bundle;
  * PACKAGE_NAME : chen.baselib
  **/
 public abstract class ActivityModule {
+
     public abstract void init(ModuleContext moduleContext, Bundle bundle);
 
     public abstract void onSaveInstanceState(Bundle outState);

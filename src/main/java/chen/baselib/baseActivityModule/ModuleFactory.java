@@ -1,7 +1,7 @@
 package chen.baselib.baseActivityModule;
 
 /**
- * Introduce :
+ * Introduce :  利用发射获取Activity中不同的小Module
  * Created by CHEN_ on 2019/3/29.
  * PACKAGE_NAME : chen.baselib
  **/
@@ -12,10 +12,7 @@ public class ModuleFactory {
         }
         try {
             Class<? extends ActivityModule> moduleClzz = (Class<? extends ActivityModule>) Class.forName(name);
-            if (moduleClzz != null) {
-                ActivityModule instance = (ActivityModule) moduleClzz.newInstance();
-                return instance;
-            }
+            return (ActivityModule) moduleClzz.newInstance();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {

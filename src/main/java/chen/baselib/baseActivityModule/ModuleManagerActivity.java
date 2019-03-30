@@ -10,7 +10,7 @@ import android.util.Log;
 import java.util.ArrayList;
 
 /**
- * Introduce :
+ * Introduce : 如需使用activity分发要继承这个ModuleManagerActivity
  * Created by CHEN_ on 2019/3/29.
  * PACKAGE_NAME : chen.baselib
  **/
@@ -28,18 +28,6 @@ public abstract class ModuleManagerActivity extends AppCompatActivity {
             moduleManager.initModules(savedInstanceState, ModuleManagerActivity.this, moduleConfig());
             Log.v(TAG, "init use time = " + (System.currentTimeMillis() - ti));
         }
-    /*    //布局onLayout时初始化
-        getWindow().getDecorView().getRootView().getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-                if (moduleManager == null) {
-                    long ti = System.currentTimeMillis();
-                    moduleManager = new ActivityModuleManager();    //初始化管理者
-                    moduleManager.initModules(savedInstanceState, ModuleManagerActivity.this, moduleConfig());
-                    Log.v(TAG, "init use time = " + (System.currentTimeMillis() - ti));
-                }
-            }
-        });*/
     }
 
     //获取viewId

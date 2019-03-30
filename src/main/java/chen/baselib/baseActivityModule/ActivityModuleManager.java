@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 /**
- * Introduce :
+ * Introduce :  获取Activity的module信息
  * Created by CHEN_ on 2019/3/29.
  * PACKAGE_NAME : chen.baselib
  **/
@@ -21,17 +21,17 @@ public class ActivityModuleManager extends ModuleManager {
     }
 
     public void initModules(Bundle saveInstance, Activity activity) {
-        if (getModuleName() == null) return;
+        if (getModule() == null) return;
         //获取配置
-        for (String moduleName : getModuleName().keySet()) {
-            ActivityModule module = ModuleFactory.newModuleInstance(moduleName);
+        for (String moduleName : getModule().keySet()) {
+            ActivityModule module = ModuleFactory.newModuleInstance(moduleName);    //获取到activity的小模块module
             if (module != null) {
                 ModuleContext moduleContext = new ModuleContext();
                 moduleContext.setContext(activity);
                 moduleContext.setSaveInstance(saveInstance);
                 //关联视图
                 SparseArrayCompat<ViewGroup> viewGroups = new SparseArrayCompat<>();
-                ArrayList<Integer> mViewIds = getModuleName().get(moduleName);
+                ArrayList<Integer> mViewIds = getModule().get(moduleName);  //module的viewId
                 if (mViewIds != null && mViewIds.size() > 0) {
                     for (int i = 0; i < mViewIds.size(); i++) {
                         viewGroups.put(i, (ViewGroup) activity.findViewById(mViewIds.get(i).intValue()));

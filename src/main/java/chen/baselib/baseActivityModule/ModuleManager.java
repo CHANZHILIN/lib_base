@@ -7,15 +7,15 @@ import android.util.ArrayMap;
 import java.util.ArrayList;
 
 /**
- * Introduce :
+ * Introduce :  模块管理
  * Created by CHEN_ on 2019/3/29.
  * PACKAGE_NAME : chen.baselib
  **/
 public class ModuleManager {
-    private ArrayMap<String, ArrayList<Integer>> modules = new ArrayMap<>();   //模块名字
+    private ArrayMap<String, ArrayList<Integer>> modules = new ArrayMap<>();   //模块名字  key:模块module的路径，value:要装载module的ViewGroup的id
     protected ArrayMap<String, ActivityModule> allModules = new ArrayMap<>();    //模块实体
 
-    public ArrayMap<String, ArrayList<Integer>> getModuleName() {
+    public ArrayMap<String, ArrayList<Integer>> getModule() {
         return modules;
     }
 

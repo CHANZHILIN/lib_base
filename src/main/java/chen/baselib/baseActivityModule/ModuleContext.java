@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 public class ModuleContext {
     private Activity context;
     private Bundle saveInstance;
-    private SparseArrayCompat<ViewGroup> viewGroups = new SparseArrayCompat<>();
+    private SparseArrayCompat<ViewGroup> viewGroups = new SparseArrayCompat<>();    //保存分发的ViewGroup
 
     public Activity getContext() {
         return context;

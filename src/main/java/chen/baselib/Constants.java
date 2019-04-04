@@ -7,5 +7,6 @@ package chen.baselib;
  **/
 public interface Constants {
     String LOGIN_PATH = "/module_login/loginActivity";      //登录页面
+
     String SECOND_PATH = "/module_login/secondActivity";      //fragment的页面
 }

@@ -1,4 +1,4 @@
-package chen.baselib.baseActivityModule;
+package chen.baselib.modularization_distribute;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -34,11 +34,11 @@ public class ActivityModuleManager extends ModuleManager {
                 ArrayList<Integer> mViewIds = getModule().get(moduleName);  //module的viewId
                 if (mViewIds != null && mViewIds.size() > 0) {
                     for (int i = 0; i < mViewIds.size(); i++) {
-                        viewGroups.put(i, (ViewGroup) activity.findViewById(mViewIds.get(i).intValue()));
+                        viewGroups.put(i, (ViewGroup) activity.findViewById(mViewIds.get(i)));
                     }
                 }
                 moduleContext.setViewGroups(viewGroups);    //保存视图
-                module.init(moduleContext, null);  //初始化每个module
+                module.init(moduleContext, saveInstance);  //初始化每个module
                 allModules.put(moduleName, module);      //记录module的名称和信息
             }
         }

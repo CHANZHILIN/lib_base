@@ -1,4 +1,4 @@
-package chen.baselib.baseActivityModule;
+package chen.baselib.modularization_distribute;
 
 import android.util.ArrayMap;
 
@@ -14,4 +14,5 @@ public class ModuleUtil {
         }
         return true;
     }
+
 }

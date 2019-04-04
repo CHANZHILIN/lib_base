@@ -1,11 +1,10 @@
-package chen.baselib.baseActivityModule;
+package chen.baselib.modularization_distribute;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.ArrayMap;
-import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -23,10 +22,10 @@ public abstract class ModuleManagerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(getContentViewId());
         if (moduleManager == null) {
-            long ti = System.currentTimeMillis();
+//            long ti = System.currentTimeMillis();
             moduleManager = new ActivityModuleManager();    //初始化管理者
             moduleManager.initModules(savedInstanceState, ModuleManagerActivity.this, moduleConfig());
-            Log.v(TAG, "init use time = " + (System.currentTimeMillis() - ti));
+//            Log.v(TAG, "init use time = " + (System.currentTimeMillis() - ti));
         }
     }
 

@@ -1,4 +1,4 @@
-package chen.baselib.baseActivityModule;
+package chen.baselib.modularization_distribute;
 
 import android.os.Bundle;
 

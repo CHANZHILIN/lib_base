@@ -1,4 +1,4 @@
-package chen.baselib.baseActivityModule;
+package chen.baselib.modularization_distribute;
 
 /**
  * Introduce :  利用发射获取Activity中不同的小Module

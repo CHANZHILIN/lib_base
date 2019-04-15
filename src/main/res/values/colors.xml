@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FC5E44</color>
+    <color name="colorPrimaryDark">#FC5E44</color>
+    <color name="colorAccent">#B2FC5E44</color>
+    <color name="colorPrimaryTextBlack">#000000</color>
+    <color name="colorSubTextBlack">#888686</color>
+    <color name="white">#FFFFFF</color>
+    <color name="darkColorPrimary">#302F2F</color>
+    <color name="darkColorAccent">#474646</color>
+    <color name="colorSubTextWhite">#F5F5F5</color>
+    <color name="dark_bg">#636262</color>
+    <color name="light_line_bg">#B0CECECE</color>
+    <color name="dark_line_bg">#B07E7D7D</color>
+</resources>

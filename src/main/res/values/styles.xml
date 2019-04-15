@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="AppLightTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>    <!--主题色-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>      <!--辅助色或者强调色-->
+        <item name="android:textColorPrimary">@color/colorPrimaryTextBlack</item>       <!--主字体颜色-->
+        <item name="android:textColorSecondary">@color/colorSubTextBlack</item>         <!--辅助字体颜色-->
+        <item name="android:windowBackground">@color/white</item>               <!--背景颜色-->
+        <item name="lineBackground">@color/light_line_bg</item>        <!-- 小分割线颜色-->
+    </style>
+
+    <style name="AppDarkTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/darkColorPrimary</item>
+        <item name="colorPrimaryDark">@color/darkColorPrimary</item>
+        <item name="colorAccent">@color/darkColorAccent</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/colorSubTextWhite</item>
+        <item name="android:windowBackground">@color/dark_bg</item>
+        <item name="lineBackground">@color/dark_line_bg</item>
+    </style>
+</resources>

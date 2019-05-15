@@ -1,9 +1,9 @@
-package chen.baselib;
+package chen.baselib.application;
 
 /**
  * Introduce :  moduleApplication的配置
  * Created by CHEN_ on 2019/5/9.
- * PACKAGE_NAME : chen.baselib
+ * PACKAGE_NAME : chen.baselib.application
  **/
 public class ModuleConfig {
 

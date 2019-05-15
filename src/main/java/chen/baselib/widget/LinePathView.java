@@ -21,7 +21,7 @@ import java.util.Arrays;
 import java.util.concurrent.Semaphore;
 
 /**
- * Introduce :
+ * Introduce : 线路径动画
  * Created by CHEN_ on 2019/4/30.
  * PACKAGE_NAME : chen.baselib.widget
  **/

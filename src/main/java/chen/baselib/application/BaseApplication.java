@@ -1,13 +1,15 @@
-package chen.baselib;
+package chen.baselib.application;
 
 import android.support.multidex.MultiDexApplication;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 
+import chen.baselib.BuildConfig;
+
 /**
  * Introduce :  主Application
  * Created by CHEN_ on 2019/5/9.
- * PACKAGE_NAME : chen.baselib
+ * PACKAGE_NAME : chen.baselib.application
  **/
 public class BaseApplication extends MultiDexApplication {
     public synchronized static BaseApplication getInstance() {

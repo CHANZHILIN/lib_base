@@ -76,6 +76,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         initListener();
     }
 
+    /*
+        返回点击结束
+     */
     private void setBackClick() {
         if (mIvBack != null) {
             mIvBack.setOnClickListener(new View.OnClickListener() {

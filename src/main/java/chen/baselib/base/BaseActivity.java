@@ -28,15 +28,6 @@ import chen.baselib.utils.AndroidBugWorkaround;
 
 public abstract class BaseActivity extends AppCompatActivity {
 //    Unbinder unbinder;
-/*    //    @BindView(R.id.tv_toolbar_title)
-    protected TextView toolbarTitle;
-    //    @BindView(R.id.iv_toolbar_back)
-    protected ImageView toolbarBack;
-    //    @BindView(R.id.iv_toolbar_delete)
-    protected ImageView toolbarDelete;
-    //    @BindView(R.id.tv_toolbar_righttitle)
-    protected TextView toolbarRightTitle;*/
-
 //    private AlertDialog loadingDialog;
 
     protected ImageView mIvBack;

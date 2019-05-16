@@ -5,6 +5,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
@@ -12,6 +13,8 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import chen.baselib.R;
 import chen.baselib.utils.AndroidBugWorkaround;
 
@@ -27,8 +30,8 @@ import chen.baselib.utils.AndroidBugWorkaround;
  */
 
 public abstract class BaseActivity extends AppCompatActivity {
-//    Unbinder unbinder;
-//    private AlertDialog loadingDialog;
+    Unbinder mUnbinder;
+    private AlertDialog loadingDialog;
 
     protected ImageView mIvBack;
     protected TextView mTitle;
@@ -52,15 +55,18 @@ public abstract class BaseActivity extends AppCompatActivity {
             ChangeStatusTextColorUtil.changeTextColor(mContext);
         }*/
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-//        unbinder = ButterKnife.bind(this);
-//        loadingDialog = new AlertDialog.Builder(this, R.style.CustomDialog)
-//                .setView(R.layout.layout_loading_view)
-//                .setCancelable(true)
-//                .create();
-//
+        mUnbinder = ButterKnife.bind(this);
+
+        loadingDialog = new AlertDialog.Builder(this, R.style.CustomDialog)
+                .setView(R.layout.layout_loading_view)
+                .setCancelable(true)
+                .create();
+
         mIvBack = findViewById(R.id.iv_back);
         mTitle = findViewById(R.id.title);
         mRightTitle = findViewById(R.id.right_title);
+
+
         // 这里把标题栏回退点击事件放在init之前，是为了可以在子页面根据需要重写他的点击事件
         setBackClick();
         init();
@@ -95,7 +101,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     /**
      * 初始化
      */
-    protected void init() {}
+    protected abstract void init();
 
     /**
      * 初始化点击事件
@@ -105,17 +111,17 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-//        hideLoading();
+        hideLoading();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        /*if (unbinder != null) {
-            unbinder.unbind();
+        if (mUnbinder != null) {
+            mUnbinder.unbind();
         }
         if (loadingDialog != null)
-            loadingDialog = null;*/
+            loadingDialog = null;
     }
 
     protected void setTitle(final String title) {
@@ -129,17 +135,17 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     }
 
-  /*  protected void showLoading() {
+    protected void showLoading() {
         if (!loadingDialog.isShowing()) {
             loadingDialog.show();
         }
-    }*/
+    }
 
-/*    protected void hideLoading() {
+    protected void hideLoading() {
         if (loadingDialog.isShowing()) {
             loadingDialog.dismiss();
         }
-    }*/
+    }
 
     /**
      * 覆写startActivity方法，加入切换动画

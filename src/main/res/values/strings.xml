@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">BaseLib</string>
     <string name="back">返回</string>
+    <string name="network_error">网络异常,请稍后再试</string>
 </resources>

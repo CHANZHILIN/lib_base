@@ -12,4 +12,5 @@
     <color name="dark_bg">#636262</color>
     <color name="light_line_bg">#B0CECECE</color>
     <color name="dark_line_bg">#B07E7D7D</color>
+    <color name="dark_bg_half">#CC636262</color>
 </resources>
